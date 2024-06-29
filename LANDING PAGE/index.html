@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocacola Website Landing Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navigation">
+                <li><a href="https://www.coca-cola.com/us/en">Home</a></li>
+                <li><a href="https://www.coca-colastore.com/">Menu</a></li>
+                <li><a href="https://www.coca-cola.com/us/en/brands">What's New</a></li>
+                <li><a href="https://www.coca-colacompany.com/about-us/contact-us">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Taste the Feeling</h2>
+                <p>Since 1886, Coca-Cola has been a global icon of refreshment and joy. Enjoy our classic, timeless taste while we innovate for a sustainable future, bringing people together one Coke at a time. Discover our exciting campaigns and join the celebration.</p>
+                <a href="https://en.wikipedia.org/wiki/Coca-Cola">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="cocacola1.png"></div>
+                        <div class="swiper-slide"><img src="cocacola2.png"></div>
+                        <div class="swiper-slide"><img src="cocacola3.png"></div>
+                        <div class="swiper-slide"><img src="cocacola4.png"></div>
+                        <div class="swiper-slide"><img src="cocacola5.png"></div>
+                        <div class="swiper-slide"><img src="cocacola6.png"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/cocacolaindia/"><img src="facebook.png"></a></li>
+            <li><a href="https://x.com/cocacola"><img src="twitter.png"></a></li>
+            <li><a href="https://www.instagram.com/cocacola/?hl=en"><img src="instagram.png"></a></li>
+        </ul>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+          loop: true,
+        });
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+      </script>
+      </script>
+</body>
+</html>
